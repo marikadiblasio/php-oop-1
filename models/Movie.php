@@ -1,5 +1,5 @@
 <?php 
-
+include __DIR__.'/Category.php';
 class Movie{
     public int $id;
     public string $title;
@@ -7,9 +7,9 @@ class Movie{
     public string $nationality;
     public float $vote;
     public string $image;
-    public array $genre;
+    public $genre;
 
-    public function __construct(string $title, string $original_title, string $nationality, float $vote, string $image, array $genre){
+    public function __construct(string $title, string $original_title, string $nationality, float $vote, string $image, Category $genre){
         $this->title = $title;
         $this->original_title = $original_title;
         $this->nationality = $nationality;

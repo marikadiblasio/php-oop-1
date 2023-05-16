@@ -1,7 +1,7 @@
 <?php 
 class Category{
-    public string $genre;
-    public function __construct(string $genre){
+    public array $genre;
+    public function __construct(array $genre){
         $this->genre = $genre;
     }
 }
