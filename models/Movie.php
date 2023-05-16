@@ -7,14 +7,15 @@ class Movie{
     public string $nationality;
     public float $vote;
     public string $image;
-    public $category = [];
+    public array $genre;
 
-    public function __construct(string $title, string $original_title, string $nationality, float $vote, string $image){
+    public function __construct(string $title, string $original_title, string $nationality, float $vote, string $image, array $genre){
         $this->title = $title;
         $this->original_title = $original_title;
         $this->nationality = $nationality;
         $this->vote = $vote;
         $this->image = $image;
+        $this->genre = $genre;
     }
     public function capitalizeTitle(){
         return strtoupper($this->title);
