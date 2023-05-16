@@ -1,7 +1,7 @@
 <?php 
 include __DIR__.'/models/Movie.php';
-$prova = new Movie('cip', 'originalcip', 'en', 4, 'ciiip');
-var_dump($prova);
+include __DIR__.'/partials/db.php';
+var_dump($movie_list);
 ?>
 <!DOCTYPE html>
 <html lang="en">
