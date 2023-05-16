@@ -10,13 +10,20 @@
                             <div class="card-text">
                                 <div>
                                     Original title: <span class="fw-semibold"><?php echo $movie->original_title ?></span>
+                                    <div class="icon-flag">
+                                        <img src="./partials/img/<?php echo $movie->nationality ?>.png" alt="Country: <?php echo $movie->nationality ?>">
+                                    </div>
                                 </div>
                                 <div>
                                     Genre:<?php   foreach($movie->genre->genre as $value){
                                     echo " $value "; } ?>
                                 </div>
                                 <div>
-                                    Vote: <?php echo $movie->roundVote() ?>
+                                    Vote: <?php echo $movie->vote;?>
+                                    <div>
+                                        <?php echo str_repeat('<i class="fa-solid fa-star"></i>', $movie->roundVote());?>
+                                        <?php echo str_repeat('<i class="fa-regular fa-star"></i>', (5 - $movie->roundVote()));?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -8,6 +8,7 @@ class Movie{
     public float $vote;
     public string $image;
     public $genre;
+    private $availableFlags = ['us'];
 
     public function __construct(string $title, string $original_title, string $nationality, float $vote, string $image, Category $genre){
         $this->title = $title;
@@ -21,6 +22,6 @@ class Movie{
         return strtoupper($this->title);
     }
     public function roundVote(){
-        return round($this->vote);
+        return round($this->vote / 2);
     }
 }
